@@ -1,0 +1,449 @@
+/* =========================================
+   1. GLOBAL & VARS (PALETTE PREMIUM)
+   ========================================= */
+:root {
+    /* Nuova Palette Colori */
+    --primary: #023e8a;      /* Blu Oceano Profondo - Intestazioni */
+    --secondary: #0077b6;    /* Blu Mare Chiaro - Elementi secondari */
+    --accent: #ffb703;       /* Giallo Sole - Bottoni e Call to Action */
+    --accent-hover: #fb8500; /* Arancione - Hover sui bottoni */
+    
+    --bg-light: #f8f9fa;     /* Sfondo grigio chiarissimo (più riposante del bianco) */
+    --bg-white: #ffffff;
+    --text-main: #334155;    /* Grigio scuro ardesia (ottimo per lettura) */
+    --text-light: #f1f5f9;
+    
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --radius: 12px;          /* Angoli arrotondati moderni */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Open Sans', sans-serif; 
+    color: var(--text-main); 
+    background: var(--bg-light); 
+    line-height: 1.6;
+    scroll-behavior: smooth; 
+}
+
+h1, h2, h3, h4 { 
+    font-family: 'Montserrat', sans-serif; 
+    color: var(--primary); 
+    font-weight: 700; 
+    letter-spacing: -0.5px;
+}
+
+a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.bg-gray { background-color: var(--bg-light); }
+
+/* =========================================
+   2. NAVBAR (Pulita e Leggibile)
+   ========================================= */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255, 255, 255, 0.95); /* Leggera trasparenza */
+    padding: 15px 5%; 
+    position: sticky; top: 0; z-index: 1000;
+    backdrop-filter: blur(10px); /* Effetto vetro */
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+.wave-icon { color: var(--secondary); font-size: 1.8rem; }
+
+.nav-links { display: flex; list-style: none; gap: 25px; margin-left: auto; align-items: center; }
+.nav-links a { font-size: 0.95rem; font-weight: 600; color: var(--text-main); position: relative; }
+.nav-links a:hover { color: var(--secondary); }
+
+/* Bottone Prenota nella Nav (Ben visibile) */
+.btn-prenota { 
+    background: var(--primary); 
+    color: #fff !important; 
+    padding: 10px 25px; 
+    border-radius: 50px; 
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(2, 62, 138, 0.3);
+}
+.btn-prenota:hover { background: var(--secondary); transform: translateY(-2px); }
+
+.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; }
+.hamburger span { width: 30px; height: 3px; background-color: var(--primary); border-radius: 2px; }
+
+/* Link Torna alla Home */
+.back-home-wrapper { width: 100%; padding: 20px 5%; background: var(--bg-light); }
+.link-back-orange { color: var(--primary); font-weight: 700; display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+.link-back-orange:hover { color: var(--accent); text-decoration: underline; }
+
+/* =========================================
+   3. HERO SECTION (Fix Leggibilità)
+   ========================================= */
+.hero {
+    height: 90vh; /* Un po' più alta per impatto */
+    /* Overlay più scuro (0.5) per far leggere il testo bianco */
+    background: linear-gradient(rgba(0,20,40,0.5), rgba(0,20,40,0.6)), url('assets/hero-bg.png');
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; /* Effetto parallasse */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: #fff;
+    padding-top: 60px;
+}
+.hero h1 { 
+    font-size: 4.5rem; 
+    margin-bottom: 15px; 
+    color: #fff;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Ombra forte per staccare dal fondo */
+    line-height: 1.1;
+}
+.hero h2 { 
+    font-size: 1.4rem; 
+    font-weight: 400; 
+    color: #e0f2fe; /* Bianco sporco leggermente azzurro */
+    margin-bottom: 40px; 
+    max-width: 800px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.hero-buttons { display: flex; gap: 20px; justify-content: center; }
+
+/* Bottoni Hero Migliorati */
+.btn-hero { padding: 16px 35px; font-weight: 700; border-radius: 50px; border: none; cursor: pointer; display: inline-block; font-size: 1.1rem; transition: all 0.3s ease; }
+.btn-hero.primary { 
+    background: var(--accent); 
+    color: var(--text-main); 
+    box-shadow: 0 10px 20px rgba(255, 183, 3, 0.4);
+}
+.btn-hero.primary:hover { background: var(--accent-hover); color: #fff; transform: translateY(-3px); }
+
+.btn-hero.secondary { 
+    background: rgba(255,255,255,0.1); 
+    color: #fff; 
+    backdrop-filter: blur(5px); 
+    border: 2px solid rgba(255,255,255,0.8); 
+}
+.btn-hero.secondary:hover { background: #fff; color: var(--primary); transform: translateY(-3px); }
+
+/* =========================================
+   4. SEZIONI & CARDS (Design Pulito)
+   ========================================= */
+.section-light { padding: 100px 0; background: var(--bg-white); }
+.section-dark { padding: 100px 0; background: var(--bg-light); } /* Grigio chiaro elegante */
+
+.section-title { 
+    text-align: center; 
+    font-size: 2.8rem; 
+    margin-bottom: 60px; 
+    color: var(--primary); 
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Griglie */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+
+/* Stile Card Unificato */
+.exp-card, .package-card, .hotel-card { 
+    background: #fff; 
+    border: 1px solid rgba(0,0,0,0.05); /* Bordo sottilissimo */
+    border-radius: var(--radius); 
+    padding: 40px 30px; 
+    text-align: center; 
+    box-shadow: var(--shadow-sm); 
+    transition: all 0.3s ease; 
+}
+.exp-card:hover, .package-card:hover, .hotel-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: var(--shadow-md); 
+    border-color: var(--secondary);
+}
+
+/* Experience Icons (Cerchi Colorati) */
+.experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.exp-icon { 
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%; 
+    margin: 0 auto 25px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 2.5rem; 
+    color: #fff; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, var(--secondary), var(--primary)); /* Gradiente Blu default */
+}
+/* Varianti Colore Icone */
+.icon-orange { background: linear-gradient(135deg, #ffb703, #fb8500); } 
+.icon-blue { background: linear-gradient(135deg, #48cae4, #0077b6); } 
+.icon-green { background: linear-gradient(135deg, #2ec4b6, #028090); } 
+
+.exp-card h4 { font-size: 1.3rem; margin-bottom: 15px; color: var(--text-main); }
+.exp-card p { color: #64748b; font-size: 1rem; }
+.badge-new { background: var(--accent); color: var(--text-main); font-size: 0.7rem; padding: 3px 8px; border-radius: 6px; vertical-align: middle; margin-left: 8px; font-weight: bold; }
+.exp-card.clickable { cursor: pointer; border-bottom: 4px solid var(--accent); }
+
+/* Pacchetti Pricing */
+.package-card.popular { 
+    border: 2px solid var(--primary); 
+    transform: scale(1.05); 
+    position: relative;
+    z-index: 2;
+}
+.package-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.pkg-header { color: #64748b; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+.price { font-size: 3rem; color: var(--primary); font-weight: 800; margin: 20px 0; }
+
+.btn-card { 
+    background: transparent; 
+    color: var(--primary); 
+    border: 2px solid var(--primary); 
+    padding: 12px 30px; 
+    width: 100%; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    margin-top: 25px; 
+    font-weight: 700;
+    transition: 0.3s;
+}
+.btn-card:hover { background: var(--primary); color: #fff; }
+
+/* =========================================
+   5. ANTEPRIMA ITINERARIO
+   ========================================= */
+.section-preview-itinerary { padding: 100px 0; background: #fff; }
+.preview-card { display: flex; margin-bottom: 50px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-sm); background: #fff; }
+.preview-card.reverse { flex-direction: row-reverse; }
+.preview-img { flex: 1; min-height: 350px; background-size: cover; background-position: center; position: relative; }
+.preview-text { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+.preview-text h3 { font-size: 2rem; margin-bottom: 15px; }
+.preview-text p { font-size: 1.1rem; color: #475569; }
+.preview-badge { position: absolute; top: 30px; left: 30px; background: var(--accent); color: var(--text-main); padding: 8px 15px; font-weight: 800; border-radius: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.btn-text-link { color: var(--primary); font-weight: 800; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 10px; }
+.btn-text-link:hover { gap: 15px; color: var(--secondary); }
+
+/* =========================================
+   6. GRUPPI (Immagini Grandi)
+   ========================================= */
+.section-blue-gradient { background: linear-gradient(180deg, var(--bg-white) 0%, #e0f2fe 100%); padding: 100px 0; }
+.groups-container { display: flex; flex-direction: column; gap: 60px; }
+.group-row { display: flex; background: #fff; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); }
+.group-row.reverse { flex-direction: row-reverse; }
+.group-image { flex: 1.5; background-size: cover; background-position: center; min-height: 400px; }
+.group-info { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+.badge-group { display: inline-block; background: var(--primary); color: #fff; padding: 6px 12px; font-size: 0.8rem; border-radius: 6px; width: fit-content; margin-bottom: 20px; font-weight: bold; }
+.badge-group.green { background: var(--secondary); }
+.group-info h3 { font-size: 2rem; margin-bottom: 15px; }
+.group-price { font-size: 2.2rem; color: var(--primary); font-weight: 800; margin-bottom: 30px; }
+.btn-group { background: var(--primary); border: none; color: #fff; padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 50px; align-self: start; }
+.btn-group:hover { background: var(--secondary); }
+
+/* =========================================
+   7. PIATTI TIPICI (Layout Griglia)
+   ========================================= */
+.section-white { background: #fff; padding: 100px 0; }
+.food-section-layout { display: flex; gap: 60px; align-items: center; }
+.food-text { flex: 1; }
+.section-title-left { font-size: 2.8rem; margin-bottom: 30px; text-align: left; color: var(--primary); }
+.food-item { display: flex; gap: 20px; margin-top: 30px; }
+.food-line { width: 4px; background: var(--accent); height: auto; flex-shrink: 0; border-radius: 2px; }
+.food-item h4 { font-size: 1.3rem; margin-bottom: 5px; color: var(--text-main); }
+.food-item p { color: #64748b; }
+
+.food-images { flex: 1.2; height: 500px; display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; }
+.img-grid-big { grid-column: 1; grid-row: 1 / span 2; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow-md); transition: transform 0.3s; }
+.img-grid-small { grid-column: 2; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow-md); transition: transform 0.3s; }
+.img-grid-big:hover, .img-grid-small:hover { transform: scale(1.02); }
+
+/* =========================================
+   8. RECENSIONI (Dark Mode Elegante)
+   ========================================= */
+.section-reviews-dark { background: #0f172a; padding: 100px 0; color: #fff; }
+.section-reviews-dark h3 { color: #fff; }
+.review-box { background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+.stars { color: var(--accent); margin-bottom: 20px; font-size: 1.2rem; }
+.quote { font-style: italic; font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px; color: #cbd5e1; }
+.author strong { display: block; color: #fff; font-size: 1.1rem; }
+.author span { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+
+/* =========================================
+   9. CTA ORANGE (Call to Action)
+   ========================================= */
+.section-cta-orange {
+    background: linear-gradient(135deg, #ffb703, #fb8500);
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+.section-cta-orange h3 {
+    color: #333;
+    font-size: 3rem;
+    font-family: 'Times New Roman', serif;
+    font-weight: 400; /* Stile elegante */
+    margin-bottom: 20px;
+}
+.section-cta-orange p {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-cta-white {
+    background-color: #fff;
+    color: #fb8500;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: inline-block;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+.btn-cta-white:hover { transform: scale(1.05); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+
+/* =========================================
+   10. CONTATTI (Clean & Modern)
+   ========================================= */
+.contact-section-new { padding: 100px 0; background: var(--bg-light); }
+.contact-container-flex { display: flex; gap: 50px; flex-wrap: wrap; justify-content: center; }
+.contact-box { 
+    flex: 1; min-width: 350px; 
+    background: #fff; border-radius: 20px; padding: 50px; 
+    box-shadow: var(--shadow-md); 
+}
+.contact-box h3 { font-size: 1.8rem; margin-bottom: 40px; color: var(--primary); }
+.info-row { display: flex; gap: 25px; margin-bottom: 30px; align-items: flex-start; }
+.icon-circle { 
+    width: 50px; height: 50px; 
+    background: #e0f2fe; color: var(--primary); 
+    border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; 
+    font-size: 1.4rem; 
+    flex-shrink: 0;
+}
+.info-text h4 { font-size: 1.1rem; color: var(--text-main); margin-bottom: 5px; font-weight: 700; }
+.info-text p { color: #64748b; font-size: 1rem; }
+
+/* Form */
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.input-new { 
+    width: 100%; padding: 18px; 
+    border: 2px solid #e2e8f0; border-radius: 12px; 
+    background: #f8fafc; 
+    font-size: 1rem; color: var(--text-main); font-family: inherit; 
+    transition: 0.3s;
+}
+.input-new:focus { border-color: var(--primary); outline: none; background: #fff; }
+.btn-send-dark { 
+    background: var(--primary); color: #fff; 
+    width: 100%; padding: 18px; 
+    border: none; border-radius: 12px; 
+    font-weight: 700; cursor: pointer; font-size: 1.1rem; 
+    transition: 0.3s;
+}
+.btn-send-dark:hover { background: var(--secondary); }
+
+/* =========================================
+   11. ITINERARIO & METEO PAGES
+   ========================================= */
+.itinerary-header, .meteo-header { text-align: center; padding: 60px 20px; }
+.itinerary-row { display: flex; gap: 50px; margin-bottom: 100px; align-items: flex-start; }
+.itinerary-content { flex: 1; padding-top: 30px; }
+.itinerary-map { flex: 1.2; border-radius: 20px; overflow: hidden; height: 450px; box-shadow: var(--shadow-md); }
+.step-number { width: 60px; height: 60px; background: var(--accent); color: var(--text-main); font-size: 1.8rem; font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(255, 183, 3, 0.4); }
+.btn-indications { 
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--text-main); color: #fff; 
+    padding: 15px 30px; border-radius: 50px; 
+    font-weight: 600; margin-top: 30px; 
+    transition: transform 0.2s; 
+}
+.btn-indications:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+/* Meteo Pills */
+.meteo-pills { display: inline-flex; background: #fff; padding: 8px; border-radius: 50px; box-shadow: var(--shadow-sm); gap: 5px; margin-bottom: 50px; }
+.pill-btn { padding: 12px 30px; border-radius: 40px; border: none; background: transparent; color: #64748b; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem; }
+.pill-btn.active { background: var(--primary); color: #fff; box-shadow: 0 4px 10px rgba(2, 62, 138, 0.3); }
+
+.forecast-container-new { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 30px; justify-content: center; flex-wrap: wrap; }
+.weather-card-new { background: #fff; padding: 30px 20px; border-radius: 20px; min-width: 150px; text-align: center; box-shadow: var(--shadow-sm); border: 1px solid #f1f5f9; transition: 0.3s; }
+.weather-card-new:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.weather-card-new.today { border: 2px solid var(--secondary); background: #e0f2fe; }
+.w-icon { font-size: 3rem; margin: 20px 0; color: var(--secondary); }
+
+/* =========================================
+   13. DOVE DORMIRE & BOOKING
+   ========================================= */
+/* Fix specifico per le card Hotel nella Home */
+.hotel-card {
+    padding: 0 !important; /* FONDAMENTALE: Toglie la spaziatura interna che rovinava le foto */
+    overflow: hidden;      /* Assicura che la foto stia nei bordi arrotondati */
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-card img {
+    width: 100%;
+    height: 220px;         /* Altezza fissa per uniformarle */
+    object-fit: cover;     /* La foto si adatta senza deformarsi */
+    display: block;
+}
+
+.hotel-body {
+    padding: 25px;         /* Rimettiamo lo spazio solo attorno al testo */
+}
+
+.badge { background: #e0f2f1; color: var(--primary); padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+.btn-booking-link { display: inline-block; color: var(--secondary); font-weight: 700; margin-top: 10px; font-size: 0.95rem; }
+.btn-booking-link:hover { text-decoration: underline; color: var(--primary); }
+
+/* --- Stili Pagina Prenota (Checkout) --- */
+.booking-container { max-width: 900px; margin-top: 60px; margin-bottom: 100px; }
+.booking-card { background: #fff; border-radius: 20px; padding: 40px; margin-bottom: 30px; box-shadow: var(--shadow-sm); border: 1px solid #f1f5f9; }
+.step-header { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; border-bottom: 1px solid #f1f5f9; padding-bottom: 20px; }
+.step-num { width: 40px; height: 40px; background: var(--primary); color: #fff; font-weight: bold; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+.step-header h3 { margin: 0; color: var(--text-main); font-size: 1.5rem; }
+
+.selected-package-box { background: #f0f9ff; border: 2px solid #bae6fd; padding: 25px; border-radius: 15px; display: flex; justify-content: space-between; align-items: center; }
+.link-change { color: var(--primary); font-weight: 700; text-decoration: underline; }
+
+.input-field { width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 1rem; background: #f8fafc; }
+.input-field:focus { border-color: var(--primary); background: #fff; outline: none; }
+
+/* Hotel Radio Cards (Pagina Prenota) */
+.hotel-selection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.hotel-select-card { position: relative; cursor: pointer; }
+.hotel-select-card input { display: none; }
+.hotel-content { border: 2px solid #e2e8f0; border-radius: 15px; overflow: hidden; transition: 0.2s; position: relative; height: 100%; }
+.hotel-content img { width: 100%; height: 140px; object-fit: cover; display: block; } /* Anche qui fix img */
+.hotel-info { padding: 20px; }
+.hotel-cat { font-size: 0.7rem; color: var(--secondary); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+.check-mark { position: absolute; top: 15px; right: 15px; background: var(--primary); color: #fff; width: 30px; height: 30px; border-radius: 50%; display: none; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.hotel-select-card input:checked + .hotel-content { border-color: var(--primary); box-shadow: 0 10px 20px rgba(2, 62, 138, 0.15); transform: translateY(-5px); }
+.hotel-select-card input:checked + .hotel-content .check-mark { display: flex; }
+
+.btn-complete-booking { background: var(--accent); color: var(--text-main); width: 100%; padding: 20px; border: none; font-size: 1.2rem; font-weight: 800; border-radius: 12px; cursor: pointer; margin-top: 15px; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 183, 3, 0.3); }
+.btn-complete-booking:hover { background: var(--accent-hover); color: #fff; transform: translateY(-2px); }
+
+/* =========================================
+   14. RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar { flex-wrap: wrap; }
+    .nav-links { display: none; width: 100%; flex-direction: column; text-align: center; padding: 20px 0; background: #fff; margin-top: 15px; border-radius: 10px; box-shadow: var(--shadow-md); }
+    .nav-links.active { display: flex; }
+    .hero h1 { font-size: 3rem; }
+    .hero h2 { font-size: 1.1rem; }
+    .contact-container-flex, .itinerary-row, .form-grid-2, .preview-card, .preview-card.reverse, .food-section-layout, .group-row, .group-row.reverse { flex-direction: column; }
+    .food-images { height: auto; grid-template-columns: 1fr; grid-template-rows: 250px 200px 200px; }
+    .img-grid-big { grid-column: 1; grid-row: 1; }
+    .img-grid-small { grid-column: 1; }
+}

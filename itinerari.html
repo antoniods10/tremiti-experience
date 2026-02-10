@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerario Ottimizzato</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray">
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-water wave-icon"></i> Tremiti Experience
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#esperienza">Esperienza</a></li>
+            <li><a href="index.html#itinerario-preview">Itinerari</a></li>
+            <li><a href="meteo.html">Meteo</a></li>
+            <li><a href="index.html#pacchetti">Pacchetti</a></li>
+            <li><a href="index.html#gruppi">Gruppi</a></li>
+            <li><a href="index.html#dormire">Dormire</a></li>
+            <li><a href="index.html#piatti">Piatti Tipici</a></li>
+            <li><a href="index.html#recensioni">Recensioni</a></li>
+            <li><a href="index.html#contatti">Contatti</a></li>
+            <li><a href="prenota.html" class="btn-prenota">Prenota Ora</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <div class="container itinerary-header">
+        <h1>L'Itinerario Ottimizzato</h1>
+        <p>Scopri le tre tappe fondamentali del tuo viaggio nelle Tremiti. Abbiamo studiato questo percorso per minimizzare gli spostamenti.</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="itinerary-row">
+            <div class="itinerary-content">
+                <div class="step-number">1</div>
+                <h2>Isola di San Domino</h2>
+                <p>Immersi nella pineta, punto di arrivo ideale. Qui troverai la spiaggia di Cala delle Arene, l'unica sabbiosa dell'arcipelago, e la Grotta del Bue Marino.</p>
+                <a href="https://maps.google.com/maps?q=Isola+San+Domino&t=&z=14&ie=UTF8&iwloc=&output=embed" target="_blank" class="btn-indications">
+                    <i class="fas fa-map-marker-alt"></i> Ottieni indicazioni
+                </a>
+            </div>
+            <div class="itinerary-map">
+                <iframe src="https://maps.google.com/maps?q=Isola+San+Domino&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="itinerary-row">
+            <div class="itinerary-content">
+                <div class="step-number">2</div>
+                <h2>Isola di San Nicola</h2>
+                <p>Il cuore storico. Salirai verso l'Abbazia fortificata di Santa Maria a Mare per godere di un tramonto mozzafiato sull'arcipelago.</p>
+                <a href="https://maps.google.com/maps?q=Isola+San+Nicola&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" class="btn-indications">
+                    <i class="fas fa-map-marker-alt"></i> Ottieni indicazioni
+                </a>
+            </div>
+            <div class="itinerary-map">
+                <iframe src="https://maps.google.com/maps?q=Isola+San+Nicola&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="itinerary-row">
+            <div class="itinerary-content">
+                <div class="step-number">3</div>
+                <h2>Isola di Capraia</h2>
+                <p>Natura selvaggia. Raggiungibile solo via mare, è il paradiso dello snorkeling dove potrai ammirare la statua sommersa di Padre Pio.</p>
+                <a href="https://maps.google.com/maps?q=Isola+di+Capraia+Tremiti&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" class="btn-indications">
+                    <i class="fas fa-map-marker-alt"></i> Ottieni indicazioni
+                </a>
+            </div>
+            <div class="itinerary-map">
+                <iframe src="https://maps.google.com/maps?q=Isola+di+Capraia+Tremiti&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <section id="contatti" class="contact-section-new">
+        <div class="container">
+            <h3 class="section-title">Contattaci</h3>
+            <div class="contact-container-flex">
+                <div class="contact-box">
+                    <h3>Informazioni di Contatto</h3>
+                    <div class="info-row">
+                        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text"><h4>Email</h4><p>info@tremitiexperience.it</p></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                        <div class="info-text"><h4>Telefono</h4><p>+39 0882 123456</p></div>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <h3>Inviaci un Messaggio</h3>
+                    <form>
+                        <input type="email" class="input-new" placeholder="tua@email.com" style="margin-bottom:20px;">
+                        <textarea class="input-new" rows="3" placeholder="Scrivi qui il tuo messaggio..." style="margin-bottom:20px;"></textarea>
+                        <button type="submit" class="btn-send-dark">Invia</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

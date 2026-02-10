@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tremiti Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-water wave-icon"></i> Tremiti Experience
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#esperienza">Esperienza</a></li>
+            <li><a href="#itinerario-preview">Itinerario</a></li>
+            <li><a href="meteo.html">Meteo</a></li>
+            <li><a href="#pacchetti">Pacchetti</a></li>
+            <li><a href="#gruppi">Gruppi</a></li>
+            <li><a href="#dormire">Dormire</a></li>
+            <li><a href="#piatti">Piatti Tipici</a></li>
+            <li><a href="#recensioni">Recensioni</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+            <li><a href="prenota.html" class="btn-prenota">Prenota Ora</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Vivi l'estate alle Tremiti:<br>Mare, Natura e Libertà</h1>
+            <h2>Pacchetti da 1, 2 o 3 giorni tra San Domino, San Nicola e Capraia.<br>Un'esperienza organizzata, semplice e indimenticabile.</h2>
+            <div class="hero-buttons">
+                <a href="#pacchetti" class="btn-hero primary">Scopri i pacchetti <i class="fas fa-arrow-right"></i></a>
+                <a href="#itinerario-preview" class="btn-hero secondary">Guarda l'itinerario</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="esperienza" class="section-light">
+        <div class="container">
+            <h3 class="section-title">Un'Esperienza Senza Pensieri</h3>
+            <div class="experience-grid">
+                
+                <div class="exp-card clickable" onclick="window.location.href='itinerari.html'">
+                    <div class="exp-icon icon-orange"><i class="fas fa-map"></i></div>
+                    <h4>Itinerario Ottimizzato <span class="badge-new">NOVITÀ</span></h4>
+                    <p>Tre tappe strategiche per vedere il meglio delle isole senza stressare gli spostamenti.</p>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-icon icon-blue"><i class="fas fa-users"></i></div>
+                    <h4>Ideale per Gruppi</h4>
+                    <p>Attività pensate per la convivialità: dai giochi in spiaggia alle grandi tavolate di pesce.</p>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-icon icon-green"><i class="fas fa-calendar-check"></i></div>
+                    <h4>Tutto Organizzato</h4>
+                    <p>Dalle attività ai suggerimenti per dormire, abbiamo già selezionato il meglio per te.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="itinerario-preview" class="section-preview-itinerary">
+        <div class="container">
+            <h3 class="section-title">Le 3 Tappe dell'Itinerario</h3>
+            
+            <div class="preview-card">
+                <div class="preview-img" style="background-image: url('assets/tappa-domino.jpg');">
+                    <span class="preview-badge">TAPPA 1</span>
+                </div>
+                <div class="preview-text">
+                    <h3>Isola di San Domino</h3>
+                    <p>Il cuore verde dell'arcipelago. Punto di arrivo ideale, immersi nella pineta e vicini a Cala delle Arene.</p>
+                </div>
+            </div>
+
+             <div class="preview-card reverse">
+                <div class="preview-img" style="background-image: url('assets/tappa-nicola.jpg');">
+                    <span class="preview-badge">TAPPA 2</span>
+                </div>
+                <div class="preview-text">
+                    <h3>Isola di San Nicola</h3>
+                    <p>Il centro storico e culturale. Visita l'Abbazia fortificata di Santa Maria a Mare e goditi il tramonto più bello.</p>
+                </div>
+            </div>
+
+             <div class="preview-card">
+                <div class="preview-img" style="background-image: url('assets/tappa-capraia.jpg');">
+                    <span class="preview-badge">TAPPA 3</span>
+                </div>
+                <div class="preview-text">
+                    <h3>Isola di Capraia</h3>
+                    <p>Il regno del mare. Disabitata e selvaggia, tappa obbligata per lo snorkeling alla statua di Padre Pio.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="itinerari.html" class="btn-text-link">Vedi Mappa Completa <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pacchetti" class="section-dark">
+        <div class="container">
+            <h3 class="section-title">I Nostri Pacchetti</h3>
+            <div class="grid-3">
+                <div class="package-card">
+                    <div class="pkg-header">1 Giorno</div>
+                    <h3>Tuffo nel Blu</h3>
+                    <div class="price">€79</div>
+                    <p>Traghetto A/R + Tour in barca + Pranzo.</p>
+                    <button class="btn-card" onclick="location.href='prenota.html?pkg=Tuffo nel Blu'">Seleziona</button>
+                </div>
+                <div class="package-card popular">
+                    <div class="pkg-header">Best Seller</div>
+                    <h3>Weekend Arcipelago</h3>
+                    <div class="price">€219</div>
+                    <p>2 Giorni. Gommone, notte a San Domino.</p>
+                    <button class="btn-card" onclick="location.href='prenota.html?pkg=Weekend Arcipelago'">Seleziona</button>
+                </div>
+                <div class="package-card">
+                    <div class="pkg-header">3 Giorni</div>
+                    <h3>Tremiti Total</h3>
+                    <div class="price">€389</div>
+                    <p>Full experience: snorkeling e trekking.</p>
+                    <button class="btn-card" onclick="location.href='prenota.html?pkg=Tremiti Total'">Seleziona</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gruppi" class="section-blue-gradient">
+        <div class="container">
+            <h3 class="section-title white-text">Esperienze di Gruppo</h3>
+            <div class="groups-container">
+                <div class="group-row">
+                    <div class="group-image" style="background-image: url('assets/gruppo1.png');"></div>
+                    <div class="group-info">
+                        <span class="badge-group">Estate Exclusive</span>
+                        <h3>Summer Exclusive Group</h3>
+                        <p>Barca privata tutto il giorno, cene esclusive.</p>
+                        <div class="group-price">€449 <small>/persona</small></div>
+                        <button class="btn-group" onclick="location.href='prenota.html?pkg=Gruppo Summer'">Richiedi Preventivo</button>
+                    </div>
+                </div>
+                <div class="group-row reverse">
+                    <div class="group-image" style="background-image: url('assets/gruppo2.png');"></div>
+                    <div class="group-info">
+                        <span class="badge-group green">Natura & Relax</span>
+                        <h3>Nature & Culture Discovery</h3>
+                        <p>Trekking guidato e visite storiche.</p>
+                        <div class="group-price">€289 <small>/persona</small></div>
+                        <button class="btn-group" onclick="location.href='prenota.html?pkg=Gruppo Nature'">Richiedi Preventivo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dormire" class="section-light">
+        <div class="container">
+            <h3 class="section-title">Dove Dormire</h3>
+            <div class="grid-3">
+                <div class="hotel-card">
+                    <img src="assets/relais.jpg" alt="Relais Al Faro">
+                    <div class="hotel-body">
+                        <h4>Relais Al Faro B&B</h4>
+                        <span class="badge">San Domino</span>
+                        <a href="https://www.booking.com/hotel/it/relais-al-faro.it.html?aid=304142" target="_blank" class="btn-booking-link">Visualizza su Booking <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="hotel-card">
+                    <img src="assets/gino.jpg" alt="Casa di Gino">
+                    <div class="hotel-body">
+                        <h4>La Casa di Gino</h4>
+                        <span class="badge">San Nicola</span>
+                        <a href="https://www.booking.com/hotel/it/la-casa-di-gino.it.html?aid=304142" target="_blank" class="btn-booking-link">Visualizza su Booking <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="hotel-card">
+                    <img src="assets/meridiana.jpg" alt="Hotel La Meridiana">
+                    <div class="hotel-body">
+                        <h4>Hotel La Meridiana</h4>
+                        <span class="badge">San Domino</span>
+                        <a href="https://www.booking.com/hotel/it/la-meridiana-isole-tremiti.it.html?aid=304142" target="_blank" class="btn-booking-link">Visualizza su Booking <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="piatti" class="section-white">
+        <div class="container">
+            <div class="food-section-layout">
+                <div class="food-text">
+                    <h3 class="section-title-left">I Sapori delle Tremiti</h3>
+                    <p>La cucina qui ha il sapore del mare. I nostri pacchetti includono soste gastronomiche in locali selezionati che offrono solo pescato fresco.</p>
+                    <div class="food-item">
+                        <div class="food-line"></div>
+                        <div>
+                            <h4>Zuppa di Pesce alla Tremitese</h4>
+                            <p>Pescato fresco di giornata cucinato secondo tradizione.</p>
+                        </div>
+                    </div>
+                    <div class="food-item">
+                        <div class="food-line"></div>
+                        <div>
+                            <h4>Grigliata di aragoste e scampi</h4>
+                            <p>Chi è già stato su quest’arcipelago e l’ha assaggiata, definisce questo piatto con un semplice aggettivo: succulento.</p>
+                        </div>
+                    </div>
+                    <div class="food-item">
+                        <div class="food-line"></div>
+                        <div>
+                            <h4>'O Pesce fe'jute</h4>
+                            <p>Letteralmente "il pesce scappato". Si tratta di una zuppa di verdure, pomodorini e pane raffermo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-images">
+                    <img src="assets/cibo-aragosta.jpg" class="img-grid-big" alt="Grigliata">
+                    <img src="assets/cibo-zuppa.jpg" class="img-grid-small" alt="Zuppa">
+                    <img src="assets/cibo-fejute.jpg" class="img-grid-small" alt="Pesce fejute">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recensioni" class="section-reviews-dark">
+        <div class="container">
+            <h3 class="section-title white-text">Cosa dicono di noi</h3>
+            <div class="grid-3">
+                <div class="review-box">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Cercavo pace e l'ho trovata a San Domino. I tramonti lì hanno un'energia unica. Tornerò sicuramente."</p>
+                    <div class="author"><strong>Alessio</strong><br><span>Viaggiatore Solitario</span></div>
+                </div>
+                <div class="review-box">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Capraia offre il giusto mix di sport e relax. Ho adorato lo snorkeling al mattino e il relax in barca."</p>
+                    <div class="author"><strong>Chiara</strong><br><span>Solo Traveler</span></div>
+                </div>
+                <div class="review-box">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Un weekend indimenticabile. L'organizzazione è stata perfetta, abbiamo dovuto pensare a nulla."</p>
+                    <div class="author"><strong>Marco & Giulia</strong><br><span>Coppia</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-cta-orange">
+        <div class="container">
+            <h3>Pronto per partire?</h3>
+            <p>I posti per la stagione estiva si esauriscono in fretta. Blocca il tuo pacchetto oggi stesso.</p>
+            <a href="#pacchetti" class="btn-cta-white">Scegli il tuo pacchetto</a>
+        </div>
+    </section>
+
+    <section id="contatti" class="contact-section-new">
+        <div class="container">
+            <h3 class="section-title">Contattaci</h3>
+            <div class="contact-container-flex">
+                <div class="contact-box">
+                    <h3>Informazioni di Contatto</h3>
+                    <div class="info-row">
+                        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>info@tremitiexperience.it</p>
+                            <small style="color:#999;">Rispondiamo entro 24 ore</small>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                        <div class="info-text">
+                            <h4>Telefono</h4>
+                            <p>+39 0882 123456</p>
+                            <small style="color:#999;">Lun-Ven, 9:00 - 18:00</small>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="icon-circle"><i class="fas fa-clock"></i></div>
+                        <div class="info-text">
+                            <h4>Orari</h4>
+                            <p>Lunedì - Venerdì: 9:00 - 18:00</p>
+                            <p>Sabato: 9:00 - 13:00</p>
+                            <small style="color:#999;">Domenica chiusi</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <h3>Inviaci un Messaggio</h3>
+                    <form>
+                        <div class="form-grid-2">
+                            <input type="text" class="input-new" placeholder="Il tuo nome">
+                            <input type="text" class="input-new" placeholder="Il tuo numero">
+                        </div>
+                        <input type="email" class="input-new" placeholder="tua@email.com" style="margin-bottom:20px;">
+                        <textarea class="input-new" rows="4" placeholder="Scrivi qui il tuo messaggio..." style="margin-bottom:20px;"></textarea>
+                        <button type="submit" class="btn-send-dark">Invia Messaggio <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align:center; padding:30px;"><p>© 2026 Tremiti Experience.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

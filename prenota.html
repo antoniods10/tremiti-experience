@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenota - Tremiti Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray">
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-water wave-icon"></i> Tremiti Experience
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#esperienza">Esperienza</a></li>
+            <li><a href="index.html#itinerario-preview">Itinerari</a></li>
+            <li><a href="meteo.html">Meteo</a></li>
+            <li><a href="index.html#pacchetti">Pacchetti</a></li>
+            <li><a href="index.html#gruppi">Gruppi</a></li>
+            <li><a href="index.html#dormire">Dormire</a></li>
+            <li><a href="index.html#piatti">Piatti Tipici</a></li>
+            <li><a href="index.html#recensioni">Recensioni</a></li>
+            <li><a href="index.html#contatti">Contatti</a></li>
+            <li><a href="prenota.html" class="btn-prenota">Prenota Ora</a></li>
+        </ul>
+    </nav>
+
+    <div class="container booking-container">
+        
+        <div class="booking-card">
+            <div class="step-header">
+                <div class="step-num">1</div>
+                <h3>Il Pacchetto Scelto</h3>
+            </div>
+            <div class="selected-package-box">
+                <div>
+                    <h2 id="pkg-name">Caricamento...</h2>
+                    <p class="text-muted">Esperienza Tremiti Experience</p>
+                </div>
+                <a href="index.html#pacchetti" class="link-change">Cambia Pacchetto</a>
+            </div>
+        </div>
+
+        <form id="booking-form">
+            <div class="booking-card">
+                <div class="step-header">
+                    <div class="step-num">2</div>
+                    <h3>I Tuoi Dati</h3>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Nome</label>
+                        <input type="text" required class="input-field">
+                    </div>
+                    <div class="input-group">
+                        <label>Cognome</label>
+                        <input type="text" required class="input-field">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" required class="input-field">
+                    </div>
+                    <div class="input-group">
+                        <label>Telefono</label>
+                        <input type="tel" required class="input-field">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Data Preferita</label>
+                        <input type="date" required class="input-field">
+                    </div>
+                    <div class="input-group">
+                        <label>Numero Partecipanti</label>
+                        <input type="number" min="1" value="2" class="input-field">
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-card">
+                <div class="step-header">
+                    <div class="step-num">3</div>
+                    <h3>Dove vuoi dormire?</h3>
+                </div>
+                <div class="hotel-selection-grid">
+                    <label class="hotel-select-card">
+                        <input type="radio" name="hotel" value="Relais" checked>
+                        <div class="hotel-content">
+                            <img src="assets/relais.jpg" alt="Relais Al Faro">
+                            <div class="hotel-info">
+                                <span class="hotel-cat">B&B DI CHARME</span>
+                                <h4>Relais Al Faro</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> San Domino - Faro</p>
+                                <div class="check-mark"><i class="fas fa-check"></i></div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="hotel-select-card">
+                        <input type="radio" name="hotel" value="Gino">
+                        <div class="hotel-content">
+                            <img src="assets/gino.jpg" alt="Casa di Gino">
+                            <div class="hotel-info">
+                                <span class="hotel-cat">B&B STORICO</span>
+                                <h4>La Casa di Gino</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> San Nicola - Centro</p>
+                                <div class="check-mark"><i class="fas fa-check"></i></div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="hotel-select-card">
+                        <input type="radio" name="hotel" value="Meridiana">
+                        <div class="hotel-content">
+                            <img src="assets/meridiana.jpg" alt="Hotel La Meridiana">
+                            <div class="hotel-info">
+                                <span class="hotel-cat">HOTEL 3 STELLE</span>
+                                <h4>Hotel La Meridiana</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> San Domino - Centro</p>
+                                <div class="check-mark"><i class="fas fa-check"></i></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="booking-card">
+                <div class="step-header">
+                    <div class="step-num">4</div>
+                    <h3>Note Aggiuntive</h3>
+                </div>
+                <div class="input-group">
+                    <textarea class="input-field" rows="3" placeholder="Intolleranze, richieste speciali..."></textarea>
+                </div>
+                
+                <button type="button" class="btn-complete-booking" onclick="completeBooking()">
+                    Completa la Richiesta <i class="fas fa-arrow-right"></i>
+                </button>
+                <p class="disclaimer">Cliccando su completa, invierai una richiesta di disponibilità non vincolante.</p>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const pkg = urlParams.get('pkg');
+        document.getElementById('pkg-name').innerText = pkg ? pkg : "Pacchetto Standard";
+
+        function completeBooking() {
+            const form = document.getElementById('booking-form');
+            if (form.checkValidity()) {
+                alert("Grazie! La tua richiesta per " + (pkg ? pkg : "il pacchetto") + " è stata inviata con successo. Ti contatteremo presto.");
+                window.location.href = 'index.html';
+            } else {
+                form.reportValidity();
+            }
+        }
+    </script>
+</body>
+</html>

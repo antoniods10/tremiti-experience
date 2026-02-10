@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo - Tremiti Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray">
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-water wave-icon"></i> Tremiti Experience
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#esperienza">Esperienza</a></li>
+            <li><a href="index.html#itinerario-preview">Itinerari</a></li>
+            <li><a href="meteo.html">Meteo</a></li>
+            <li><a href="index.html#pacchetti">Pacchetti</a></li>
+            <li><a href="index.html#gruppi">Gruppi</a></li>
+            <li><a href="index.html#dormire">Dormire</a></li>
+            <li><a href="index.html#piatti">Piatti Tipici</a></li>
+            <li><a href="index.html#recensioni">Recensioni</a></li>
+            <li><a href="index.html#contatti">Contatti</a></li>
+            <li><a href="prenota.html" class="btn-prenota">Prenota Ora</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <div class="container meteo-header">
+        <h1>Previsioni Meteo</h1>
+        <p style="margin-bottom: 30px;">Controlla le condizioni del mare e del vento in tempo reale</p>
+
+        <div class="meteo-pills">
+            <button class="pill-btn active" onclick="fetchMeteo(42.1167, 15.4833, 'San Domino')">San Domino</button>
+            <button class="pill-btn" onclick="fetchMeteo(42.1235, 15.5087, 'San Nicola')">San Nicola</button>
+            <button class="pill-btn" onclick="fetchMeteo(42.1345, 15.5132, 'Capraia')">Capraia</button>
+        </div>
+
+        <h3 id="island-name" style="margin-bottom:20px; color:#555;">San Domino</h3>
+
+        <div id="forecast-container" class="forecast-container-new">
+            <p>Caricamento dati meteo...</p>
+        </div>
+
+        <p style="margin-top:30px; color:#999; font-size:0.8rem;">Dati meteo forniti da Open-Meteo API</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            fetchMeteo(42.1167, 15.4833, 'San Domino');
+        };
+    </script>
+</body>
+</html>
